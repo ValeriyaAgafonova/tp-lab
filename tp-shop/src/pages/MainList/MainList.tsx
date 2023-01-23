@@ -1,6 +1,7 @@
 
 import Search from '../../components/Search/Search';
 import Sorting from '../../components/Sorting/Sorting';
+import Table from '../../components/Table/Table';
 import './MainList.scss'
 
 function MainList(){
@@ -11,6 +12,7 @@ return(
     <Sorting/>
     <Search/>
 </div>
+<Table/>
     </div>
 )
 

@@ -1,0 +1,11 @@
+.tableCard{
+        display: grid;
+        grid-template-columns: 80px 1fr 120px 120px 120px;
+        font-size: 13px;
+       background-color: grey;
+       text-align: center;
+
+    &__align-start{
+        text-align: start;
+    }
+}
