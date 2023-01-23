@@ -1,3 +1,12 @@
+.mainList{
+    padding: 135px 120px;
+}
+
 .mainList__heading{
     font-size: 22px;
+}
+.mainList__filters{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
