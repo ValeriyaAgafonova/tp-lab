@@ -1,9 +1,11 @@
+import './App.scss';
+import MainList from './pages/MainList/MainList';
 
-import './App.css';
 
 function App() {
   return (
     <div className="App">
+<MainList/>
 
     </div>
   );
