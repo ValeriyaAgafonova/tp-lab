@@ -1,12 +1,13 @@
 import './App.scss';
-import MainList from './pages/MainList/MainList';
+import Information from './pages/Information/Information';
+// import MainList from './pages/MainList/MainList';
 
 
 function App() {
   return (
     <div className="App">
-<MainList/>
-
+{/* <MainList/> */}
+<Information/>
     </div>
   );
 }
