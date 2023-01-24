@@ -5,6 +5,7 @@
   text-align: center;
   align-items: center;
   height: 75px;
+  color: #4D5969;
   &__align-start {
     text-align: start;
   }
@@ -13,4 +14,10 @@
     height: 40px;
     margin: 0 auto;
   }
+&__name{
+    margin-bottom: 7px;
+}
+&__category{
+   color: #9DA8BA;
+}
 }
