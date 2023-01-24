@@ -1,20 +1,18 @@
-@import '../../vars.scss';
+@import "../../vars.scss";
 
-.table{
-    &__headings{
-        font-family: OpenSansBold;
-        display: grid;
-        grid-template-columns: 100px 1fr 150px 150px 150px;
-        align-items: center;
-        font-size: 13px;
-        height: 35px;
-       background-color: #EDF2F8;
-       text-align: center;
-       color: #4D5969;
-    }
-    &__align-start{
-        text-align: start;
-    }
+.table {
+  &__headings {
+    font-family: OpenSansBold;
+    display: grid;
+    grid-template-columns: 100px 1fr 150px 150px 150px;
+    align-items: center;
+    font-size: 13px;
+    height: 35px;
+    background-color: #edf2f8;
+    text-align: center;
+    color: #4d5969;
+  }
+  &__align-start {
+    text-align: start;
+  }
 }
-
-
