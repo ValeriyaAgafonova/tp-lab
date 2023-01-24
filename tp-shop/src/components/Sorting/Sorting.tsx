@@ -8,7 +8,7 @@ function sortData(value: string){
 }
   return (
     <div className="sorting">
-      <p>Сотрировать:</p>
+      <p>Сортировать:</p>
       <div onClick={() => sortData("name")}>
         <Tab active={active === "name"} text={"по названию"} />
       </div>
