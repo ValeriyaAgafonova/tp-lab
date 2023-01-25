@@ -1,0 +1,26 @@
+.Pagination__button{
+    width: 32px;
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid #F9FAFD;
+    -webkit-box-shadow: 0px 1px 1px 1px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 1px 1px 1px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 1px 1px 1px rgba(34, 60, 80, 0.2);
+    background-color: white;
+    cursor: pointer;
+    font-family: OpenSans;
+    font-size: 16px;
+}
+.Pagination__prev,
+.Pagination__next{
+    color: #5D6E82;
+    font-family: OpenSansBold;
+    font-size: 20px;
+   
+}
+.Pagination__number{
+    color: #4D5969;
+}
+.Pagination__active{
+   color: #2A7BE4;
+}

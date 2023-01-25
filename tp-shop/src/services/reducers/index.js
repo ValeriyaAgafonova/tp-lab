@@ -9,7 +9,8 @@ import {
     SORT_ITEMS_BY_START_DATE,
     SORT_ITEMS_BY_END_DATE,
     REVERSE_ITEMS,
-    SEARCH_FILTER
+    SEARCH_FILTER,
+    CHANGE_LIST
   } from "../actions";
 
 //   interface ICard {
@@ -43,6 +44,8 @@ const initialState = {
     itemsRequest: false,
     itemsFailed: false,
     itemsListFiltered: [],
+    pageNumberStart: 0,
+    pageNumberEnd: 4,
   };
 
   export const DataReducer = (state = initialState, action) => {
@@ -58,7 +61,7 @@ const initialState = {
           ...state,
           itemsFailed: false,
           itemsList: [...action.itemsList],
-          itemsRequest: false
+          itemsRequest: false,
         };
       }
       case GET_ITEMS_FAILED: {
@@ -95,6 +98,9 @@ const initialState = {
       case SEARCH_FILTER: {
         const buffer = state.itemsListFiltered.filter(a => a.name.toLowerCase().includes(action.payload.toLowerCase()))
         return { ...state, itemsList: buffer};
+      }
+      case CHANGE_LIST: {
+        return { ...state, pageNumberEnd: 4*action.payload , pageNumberStart: action.payload*4 - 4};
       }
 
       default:
