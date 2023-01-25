@@ -31,7 +31,7 @@ interface IData {
 }
 function MainList() {
   const dispatch = useDispatch();
-  const itemsList: ICard[] = useSelector((store: any) => store.ingredients.itemsList);
+  const itemsList: ICard[] = useSelector((store: any) => store.data.itemsList);
 
   useEffect(() => {
     dispatch(getItems() as unknown as AnyAction);

@@ -2,6 +2,11 @@ export const GET_ITEMS_REQUEST = "GET_ITEMS_REQUEST";
 export const GET_ITEMS_SUCCESS = "GET_ITEMS_SUCCESS";
 export const GET_ITEMS_FAILED = "GET_ITEMS_FAILED";
 
+export const SORT_ITEMS_BY_NAME = "SORT_ITEMS_BY_NAME";
+export const SORT_ITEMS_BY_VIEWS = "SORT_ITEMS_BY_VIEWS";
+export const SORT_ITEMS_BY_START_DATE = "SORT_ITEMS_BY_START_DATE";
+export const SORT_ITEMS_BY_END_DATE = "SORT_ITEMS_END_DATE";
+
 export const checkResponse = (response) => {
     console.log(response);
     if (response.ok) {
