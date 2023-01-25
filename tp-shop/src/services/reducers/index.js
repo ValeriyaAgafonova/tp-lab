@@ -7,7 +7,8 @@ import {
     SORT_ITEMS_BY_NAME,
     SORT_ITEMS_BY_VIEWS,
     SORT_ITEMS_BY_START_DATE,
-    SORT_ITEMS_BY_END_DATE
+    SORT_ITEMS_BY_END_DATE,
+    REVERSE_ITEMS
   } from "../actions";
 
 //   interface ICard {
@@ -80,6 +81,9 @@ const initialState = {
       case SORT_ITEMS_BY_END_DATE: {
         return { ...state, itemsList: state.itemsList.filter(a => a).sort((a, b) =>  new Date(a.end_date) - new Date(b.end_date)
   )};
+      }
+      case REVERSE_ITEMS: {
+        return { ...state, itemsList: state.itemsList.filter(a => a).reverse()};
       }
 
       default:

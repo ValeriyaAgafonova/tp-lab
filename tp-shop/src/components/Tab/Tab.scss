@@ -5,3 +5,11 @@
   .sorting__active{
     color: #344050;
   }
+  .sorting__tab{
+    display: flex;
+    gap: 5px;
+  }
+  .sorting__icon__active{
+    width: 25px;
+    height: 25px;
+  }

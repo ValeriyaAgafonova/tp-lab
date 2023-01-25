@@ -4,7 +4,7 @@ import Table from "../../components/Table/Table";
 import "./MainList.scss";
 import { useEffect, useState } from "react";
 import TableCard from "../../components/TableCard/TableCard";
-import { getItems } from "../../services/actions";
+import { getItems, SORT_ITEMS_BY_NAME } from "../../services/actions";
 import { useDispatch } from "react-redux";
 import { AnyAction } from "redux";
 import { useSelector } from "react-redux";
