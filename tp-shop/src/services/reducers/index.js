@@ -8,7 +8,8 @@ import {
     SORT_ITEMS_BY_VIEWS,
     SORT_ITEMS_BY_START_DATE,
     SORT_ITEMS_BY_END_DATE,
-    REVERSE_ITEMS
+    REVERSE_ITEMS,
+    SEARCH_FILTER
   } from "../actions";
 
 //   interface ICard {
@@ -41,6 +42,7 @@ const initialState = {
     itemsList: [],
     itemsRequest: false,
     itemsFailed: false,
+    itemsListFiltered: [],
   };
 
   export const DataReducer = (state = initialState, action) => {
@@ -63,27 +65,36 @@ const initialState = {
         return { ...state, itemsFailed: true, itemsRequest: false };
       }
       case SORT_ITEMS_BY_NAME: {
-        return { ...state, itemsList: state.itemsList.filter(a => a).sort((a, b) => {
-            var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
-            if (nameA < nameB)
-              return -1
-            if (nameA > nameB)
-              return 1
-            return 0 
-            })};
+        const buffer =  state.itemsList.filter(a => a).sort((a, b) => {
+          var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
+          if (nameA < nameB)
+            return -1
+          if (nameA > nameB)
+            return 1
+          return 0 
+          })
+        return { ...state, itemsList: buffer, itemsListFiltered: buffer};
       }
       case SORT_ITEMS_BY_VIEWS: {
-        return { ...state, itemsList: state.itemsList.filter(a => a).sort((a, b) =>  a.views - b.views )};
+        const buffer = state.itemsList.filter(a => a).sort((a, b) =>  a.views - b.views )
+        return { ...state, itemsList: buffer, itemsListFiltered: buffer};
       }
       case SORT_ITEMS_BY_START_DATE: {
-        return { ...state, itemsList: state.itemsList.filter(a => a).sort((a, b) => new Date(a.start_date) - new Date(b.start_date))};
+        const buffer = state.itemsList.filter(a => a).sort((a, b) => new Date(a.start_date) - new Date(b.start_date))
+        return { ...state, itemsList: buffer, itemsListFiltered: buffer};
       }
       case SORT_ITEMS_BY_END_DATE: {
-        return { ...state, itemsList: state.itemsList.filter(a => a).sort((a, b) =>  new Date(a.end_date) - new Date(b.end_date)
-  )};
+        const buffer = state.itemsList.filter(a => a).sort((a, b) =>  new Date(a.end_date) - new Date(b.end_date)
+        )
+        return { ...state, itemsList: buffer, itemsListFiltered: buffer};
       }
       case REVERSE_ITEMS: {
-        return { ...state, itemsList: state.itemsList.filter(a => a).reverse()};
+        const buffer = state.itemsList.filter(a => a).reverse()
+        return { ...state, itemsList: buffer, itemsListFiltered: buffer};
+      }
+      case SEARCH_FILTER: {
+        const buffer = state.itemsListFiltered.filter(a => a.name.toLowerCase().includes(action.payload.toLowerCase()))
+        return { ...state, itemsList: buffer};
       }
 
       default:

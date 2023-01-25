@@ -8,6 +8,9 @@ export const SORT_ITEMS_BY_START_DATE = "SORT_ITEMS_BY_START_DATE";
 export const SORT_ITEMS_BY_END_DATE = "SORT_ITEMS_END_DATE";
 
 export const REVERSE_ITEMS = 'REVERSE_ITEMS';
+
+export const SEARCH_FILTER = 'SEARCH_FILTER';
+
 export const checkResponse = (response) => {
     console.log(response);
     if (response.ok) {
