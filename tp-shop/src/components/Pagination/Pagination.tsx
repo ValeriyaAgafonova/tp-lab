@@ -6,8 +6,8 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { CHANGE_LIST } from "../../services/actions";
 function Pagination(){
-     const itemsList = useSelector((store: any) => store.data.itemsList);
-const pagesNumber = itemsList.length / 4;
+     const pagesNumber = useSelector((store: any) => store.data.pagesNumber);
+
 const [isActivePage, setActivePage] = useState(1)
 const dispatch = useDispatch();
 function changePage(page: number, way: string){
@@ -31,7 +31,7 @@ return (
         <div onClick={() => changePage(isActivePage, 'prev')}>
 <PaginationButton type="prev" value="<"/>
 </div>
-{ [...Array(pagesNumber)].map((item, index) =><div onClick={() => setActivePage(index+1)} key={index}><PaginationButton key={index} type='number' active={isActivePage === (index + 1)} value={(index + 1).toString()}/></div>  ) }
+{[...Array(pagesNumber)].map((item, index) =><div onClick={() => setActivePage(index+1)} key={index}><PaginationButton key={index} type='number' active={isActivePage === (index + 1)} value={(index + 1).toString()}/></div>  ) }
 <div onClick={() => changePage(isActivePage, 'next')}>
 <PaginationButton type="next" value=">" />
 </div>

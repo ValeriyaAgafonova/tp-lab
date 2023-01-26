@@ -46,6 +46,7 @@ const initialState = {
     itemsListFiltered: [],
     pageNumberStart: 0,
     pageNumberEnd: 4,
+    pagesNumber: 1,
   };
 
   export const DataReducer = (state = initialState, action) => {
@@ -62,6 +63,7 @@ const initialState = {
           itemsFailed: false,
           itemsList: [...action.itemsList],
           itemsRequest: false,
+          pagesNumber: Math.ceil([...action.itemsList].length / 4)
         };
       }
       case GET_ITEMS_FAILED: {
@@ -97,7 +99,7 @@ const initialState = {
       }
       case SEARCH_FILTER: {
         const buffer = state.itemsListFiltered.filter(a => a.name.toLowerCase().includes(action.payload.toLowerCase()))
-        return { ...state, itemsList: buffer};
+        return { ...state, itemsList: buffer, pagesNumber: Math.ceil(buffer.length / 4) === 0 ? 1 : Math.ceil(buffer.length / 4)};
       }
       case CHANGE_LIST: {
         return { ...state, pageNumberEnd: 4*action.payload , pageNumberStart: action.payload*4 - 4};

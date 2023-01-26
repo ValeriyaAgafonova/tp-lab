@@ -31,6 +31,7 @@ const pageEnd =  useSelector((store: any) => store.data.pageNumberEnd);
       </div>
       <Pagination/>
       <Table />
+      {!itemsList.length && <p className="mainList__nothing">Нет товаров</p>}
 {
         itemsList.slice(pageStart, pageEnd).map((card) => <TableCard card={card} key={card.name} />)}
     </div>

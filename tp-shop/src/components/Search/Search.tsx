@@ -1,4 +1,4 @@
-import { ChangeEvent, ChangeEventHandler } from "react";
+import { ChangeEvent } from "react";
 import "./Search.scss";
 import { useDispatch } from "react-redux";
 import { SEARCH_FILTER } from "../../services/actions";
