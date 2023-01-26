@@ -1,15 +1,17 @@
-.sorting__sort{
-    color: #2A7BE4;
+.sorting {
+  &__sort {
+    color: #2a7be4;
     cursor: pointer;
   }
-  .sorting__active{
+  &__active {
     color: #344050;
   }
-  .sorting__tab{
+  &__tab {
     display: flex;
     gap: 5px;
   }
-  .sorting__icon__active{
+  &__icon__active {
     width: 25px;
     height: 25px;
   }
+}

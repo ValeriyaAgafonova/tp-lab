@@ -8,6 +8,12 @@
   align-items: center;
   flex-direction: column;
   font-family: OpenSansBold;
+  &__back {
+    cursor: pointer;
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-bottom: 30px;
+  }
   &__card {
     box-sizing: border-box;
     padding: 40px 80px;
@@ -22,24 +28,24 @@
     justify-content: center;
     align-items: center;
   }
-  &__discount{
-width: 110px;
-height: 55px;
-position: relative;
-font-family: OpenSansBold;
-z-index: 2;
-top: 8px;
-left: 20px;
-font-size: 22px;
-color: white;
+  &__discount {
+    width: 110px;
+    height: 55px;
+    position: relative;
+    font-family: OpenSansBold;
+    z-index: 2;
+    top: 8px;
+    left: 20px;
+    font-size: 22px;
+    color: white;
   }
-  &__background{
+  &__background {
     width: 100%;
     position: absolute;
     z-index: 1;
   }
 
-  &__logo{
+  &__logo {
     height: 77px;
     width: auto;
   }
@@ -55,8 +61,8 @@ color: white;
   &__main {
     margin-top: 25px;
     display: flex;
-justify-content: center;
-gap: 76px;
+    justify-content: center;
+    gap: 76px;
   }
   &__right {
     display: flex;
@@ -64,10 +70,9 @@ gap: 76px;
     width: 60%;
   }
   &__name {
-    word-break:normal;
+    word-break: normal;
     font-size: 37px;
     margin-bottom: 40px;
- 
   }
   &__rate {
     margin-bottom: 10px;
@@ -76,9 +81,9 @@ gap: 76px;
   &__prices {
     display: flex;
     justify-content: space-between;
-    align-items:flex-end;
+    align-items: flex-end;
   }
-  &__only-price{
+  &__only-price {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -86,44 +91,43 @@ gap: 76px;
   &__old-price {
     display: flex;
     flex-direction: column;
-    color: #6F7885;
+    color: #6f7885;
   }
   &__old-price__price,
-  &__new-price__price{
+  &__new-price__price {
     display: flex;
-
   }
-  &__data__old-price{
+  &__data__old-price {
     font-size: 32px;
     position: relative;
   }
   &__data__old-price::before {
     content: "";
-    border-bottom: 3px solid #FF0000;
+    border-bottom: 3px solid #ff0000;
     position: absolute;
-   top: 0px;
-   left: -10%;
+    top: 0px;
+    left: -10%;
     width: 120%;
     height: 50%;
   }
-  &__text__old-price{
+  &__text__old-price {
     font-size: 18px;
     text-transform: uppercase;
   }
-  &__data__new-price{
+  &__data__new-price {
     font-size: 52px;
   }
-  &__text__new-price{
+  &__text__new-price {
     font-size: 18px;
     text-transform: uppercase;
   }
   &__new-price,
-  &__old-price{
+  &__old-price {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  &__span{
+  &__span {
     align-self: flex-start;
   }
 }

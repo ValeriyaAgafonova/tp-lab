@@ -17,8 +17,11 @@
     align-items: center;
     margin-bottom: 25px;
   }
-  &__nothing{
+  &__nothing {
     margin-top: 20px;
-    
+  }
+  &__link {
+    list-style: none;
+    text-decoration: none;
   }
 }
