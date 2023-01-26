@@ -10,7 +10,7 @@ import { AnyAction } from "redux";
 import { useSelector } from "react-redux";
 import { ICard } from "../../types";
 import Pagination from "../../components/Pagination/Pagination";
-
+import { Link } from "react-router-dom";
 
 function MainList() {
   const dispatch = useDispatch();
@@ -33,7 +33,21 @@ const pageEnd =  useSelector((store: any) => store.data.pageNumberEnd);
       <Table />
       {!itemsList.length && <p className="mainList__nothing">Нет товаров</p>}
 {
-        itemsList.slice(pageStart, pageEnd).map((card) => <TableCard card={card} key={card.name} />)}
+        itemsList.slice(pageStart, pageEnd).map((card) => 
+        <Link
+       
+        key={card.name}
+        to={{
+          pathname: `/information/${card.name}`,
+          state: {
+            data: card
+          }
+        }}
+       
+      >
+        <TableCard card={card} key={card.name} />
+        </Link>
+        )}
     </div>
   );
 }

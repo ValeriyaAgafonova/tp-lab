@@ -19,8 +19,12 @@ interface ITableCard {
 }
 
 function TableCard({ card }: ITableCard) {
+
+    function showInformation(){
+        console.log(card)
+    }
   return (
-    <div className="TableCard">
+    <div className="TableCard" onClick={showInformation}>
       <img className="TableCard__image" alt="alt" src={card.image_url}></img>
       <div className="TableCard__description TableCard__align-start">
       <p className="TableCard__name ">{card.name}</p>
