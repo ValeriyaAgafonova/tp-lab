@@ -7,41 +7,50 @@ import PaginationButton from "../PaginationButton/PaginationButton";
 
 function Pagination() {
   const dispatch = useDispatch();
-  const pagesNumber = useSelector((store: any) => store.data.pagesNumber);
-  const [isActivePage, setActivePage] = useState(1);
+  const pagesNumber: number = useSelector((store: any) => store.data.pagesNumber);
+  const pageActiveNumber: number = useSelector((store: any) => store.data.pageActiveNumber);
+//   const [isActivePage, setActivePage] = useState(1);
 
   function changePage(page: number, way: string) {
+  console.log(page, way)
     if (way === "next" && page < pagesNumber) {
-      setActivePage(isActivePage + 1);
+        console.log('next')
+        // setActivePage(isActivePage + 1);
       dispatch({
         type: CHANGE_LIST,
-        payload: isActivePage + 1,
+        payload: +1,
       });
     } else if (way === "prev" && page > 1) {
-      setActivePage(isActivePage - 1);
+        // setActivePage(isActivePage - 1);
       dispatch({
         type: CHANGE_LIST,
-        payload: isActivePage - 1,
+        payload: -1,
       });
+    }
+    else if (way === 'number') {
+        dispatch({
+                    type: CHANGE_LIST,
+                    payload: -(pageActiveNumber - page),
+                  });
     }
   }
 
   return (
     <div className="Pagination">
-      <div onClick={() => changePage(isActivePage, "prev")}>
+      <div onClick={() => changePage(pageActiveNumber, "prev")}>
         <PaginationButton type="prev" value="<" />
       </div>
       {[...Array(pagesNumber)].map((item, index) => (
-        <div onClick={() => setActivePage(index + 1)} key={index}>
+        <div onClick={() => changePage(index + 1, 'number')} key={index}>
           <PaginationButton
             key={index}
             type="number"
-            active={isActivePage === index + 1}
+            active={pageActiveNumber === index + 1}
             value={(index + 1).toString()}
           />
         </div>
       ))}
-      <div onClick={() => changePage(isActivePage, "next")}>
+      <div onClick={() => changePage(pageActiveNumber, "next")}>
         <PaginationButton type="next" value=">" />
       </div>
     </div>

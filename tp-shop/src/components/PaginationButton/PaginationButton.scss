@@ -18,10 +18,16 @@
     font-family: OpenSansBold;
     font-size: 20px;
   }
+  &__prev:hover,
+  &__next:hover {
+    color: #2a7be4;;
+    background-color: #f9fafd;
+  }
   &__number {
     color: #4d5969;
   }
   &__active {
     color: #2a7be4;
+    background-color: #f9fafd;
   }
 }
