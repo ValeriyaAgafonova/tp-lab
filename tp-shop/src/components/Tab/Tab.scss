@@ -1,0 +1,21 @@
+.sorting {
+  &__sort {
+    color: #2a7be4;
+    cursor: pointer;
+  }
+  &__sort:hover{
+    color: #5892de;
+  }
+  &__active {
+    color: #344050;
+    cursor: pointer;
+  }
+  &__tab {
+    display: flex;
+    gap: 5px;
+  }
+  &__icon__active {
+    width: 25px;
+    height: 25px;
+  }
+}

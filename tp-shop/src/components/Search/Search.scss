@@ -1,0 +1,23 @@
+@import "../../vars.scss";
+
+.search {
+  position: relative;
+  &__icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 10px;
+    top: 10px;
+  }
+  &__button {
+    font-family: PoppinsRegular;
+    width: 320px;
+    height: 36px;
+    border: 1px solid #d8e2ee;
+    border-radius: 18px;
+    padding: 10px 30px;
+    @media (max-width: 550px) {
+      width: 280px;
+    }
+  }
+}

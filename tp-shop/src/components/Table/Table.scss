@@ -1,0 +1,32 @@
+@import "../../vars.scss";
+
+.table {
+  &__headings {
+    font-family: OpenSansBold;
+    display: grid;
+    grid-template-columns: 100px 1fr 150px 150px 150px;
+    align-items: center;
+    font-size: 13px;
+    height: 35px;
+    background-color: #edf2f8;
+    text-align: center;
+    color: #4d5969;
+    @media (max-width: 850px) {
+      grid-template-columns: 100px 1fr 100px 100px 100px;
+      height: 40px;
+    }
+    @media (max-width: 680px) {
+      grid-template-columns: 100px 1fr;
+  
+    }
+  }
+  &__align-start {
+    text-align: start;
+  }
+  &__headings-mobile{
+    @media (max-width: 680px) {
+      display: none;
+  
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../vars.scss";
+
+.sorting {
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+  font-family: OpenSansBold;
+  color: #4d5969;
+@media (max-width: 1008px) {
+  flex-direction: column;
+  gap: 10px;
+}
+
+}
