@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/tp-lab/static/css/main.e1294404.css",
+    "main.js": "/tp-lab/static/js/main.e0b57b6b.js",
+    "static/js/787.7d121669.chunk.js": "/tp-lab/static/js/787.7d121669.chunk.js",
+    "static/media/Raleway-Regular.ttf": "/tp-lab/static/media/Raleway-Regular.3927fa2a37e6f7f4c7c0.ttf",
+    "static/media/Raleway-Black.ttf": "/tp-lab/static/media/Raleway-Black.6d75f2b870b0a5df344d.ttf",
+    "static/media/OpenSans-Regular.ttf": "/tp-lab/static/media/OpenSans-Regular.77c09223204154ae8d43.ttf",
+    "static/media/OpenSans-SemiBold.ttf": "/tp-lab/static/media/OpenSans-SemiBold.2f17aae884058c5a85df.ttf",
+    "index.html": "/tp-lab/index.html",
+    "main.e1294404.css.map": "/tp-lab/static/css/main.e1294404.css.map",
+    "main.e0b57b6b.js.map": "/tp-lab/static/js/main.e0b57b6b.js.map",
+    "787.7d121669.chunk.js.map": "/tp-lab/static/js/787.7d121669.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e1294404.css",
+    "static/js/main.e0b57b6b.js"
+  ]
+}
