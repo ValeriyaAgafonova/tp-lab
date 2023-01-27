@@ -7,6 +7,12 @@
   height: 75px;
   color: #4D5969;
   border-bottom: 1px solid #9da8ba9b;
+  @media (max-width: 850px) {
+    grid-template-columns: 100px 1fr 100px 100px 100px;
+  }
+  @media (max-width: 680px) {
+    grid-template-columns: 100px 1fr;
+  }
   &__align-start {
     text-align: start;
   }
@@ -20,5 +26,13 @@
 }
 &__category{
    color: #9DA8BA;
+}
+&__begin,
+&__finish,
+&__watch{
+  @media (max-width: 680px) {
+    display: none;
+
+  }
 }
 }

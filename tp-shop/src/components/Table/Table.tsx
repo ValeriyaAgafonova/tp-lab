@@ -5,9 +5,9 @@ function Table() {
       <div className="table__headings">
         <p>Фото</p>
         <p className="table__align-start">Название</p>
-        <p>Просмотры</p>
-        <p>Начало ротации</p>
-        <p>Конец ротации</p>
+        <p className="table__headings-mobile">Просмотры</p>
+        <p className="table__headings-mobile">Начало ротации</p>
+        <p className="table__headings-mobile">Конец ротации</p>
       </div>
     </div>
   );

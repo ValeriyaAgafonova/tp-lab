@@ -41,3 +41,4 @@ export interface ITableCard {
 export interface stateType {
   data: ICard;
 }
+

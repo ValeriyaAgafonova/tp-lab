@@ -74,7 +74,7 @@ const initialState = {
         return { ...state, itemsList: buffer, itemsListFiltered: buffer};
       }
       case SEARCH_FILTER: {
-        const buffer = state.itemsListFiltered.filter(a => a.name.toLowerCase().includes(action.payload.toLowerCase()))
+        const buffer = state.itemsListFiltered.filter(a => a.name.toLowerCase().includes(action.payload.toLowerCase()) || a.category.toLowerCase().includes(action.payload.toLowerCase()))
         return { ...state, itemsList: buffer,   pagesNumber: Math.ceil(buffer.length / 4) === 0 ? 1 : Math.ceil(buffer.length / 4),
         pageActiveNumber: 1,
         pageNumberEnd: 4,

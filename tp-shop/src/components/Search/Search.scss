@@ -16,5 +16,8 @@
     border: 1px solid #d8e2ee;
     border-radius: 18px;
     padding: 10px 30px;
+    @media (max-width: 550px) {
+      width: 280px;
+    }
   }
 }

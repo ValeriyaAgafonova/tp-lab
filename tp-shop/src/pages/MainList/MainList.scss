@@ -2,6 +2,12 @@
 
 .mainList {
   padding: 135px 120px;
+  @media (max-width: 950px) {
+    padding: 100px 60px;
+  }
+  @media (max-width: 550px) {
+    padding: 40px 20px;
+  }
   &__heading {
     font-family: PoppinsBold;
     font-size: 22px;
@@ -10,12 +16,18 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000000;
     margin-bottom: 35px;
+  
   }
   &__filters {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
+    @media (max-width: 1340px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 30px;
+    }
   }
   &__nothing {
     margin-top: 20px;

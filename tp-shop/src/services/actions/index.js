@@ -13,7 +13,6 @@ export const SEARCH_FILTER = "SEARCH_FILTER";
 
 export const CHANGE_LIST = "CHANGE_LIST";
 export const checkResponse = (response) => {
-  console.log(response);
   if (response.ok) {
     return response.json();
   } else {

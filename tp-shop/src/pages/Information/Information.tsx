@@ -2,9 +2,11 @@ import "./Information.scss";
 import { useLocation, useHistory } from "react-router-dom";
 import { stateType } from "../../types";
 
+
 function Information() {
-  const { state } = useLocation<stateType>();
   const history = useHistory();
+  const { state } = useLocation<stateType>();
+
   function formatDate(date: Date) {
     let dd = date.getDate();
     const fd = dd < 10 ? "0" + dd : `${dd}`;

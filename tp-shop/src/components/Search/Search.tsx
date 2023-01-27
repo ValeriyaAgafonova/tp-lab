@@ -7,7 +7,6 @@ function Search() {
   const dispatch = useDispatch();
   function searchClick(e: ChangeEvent) {
     const val = e.target as HTMLInputElement;
-    console.log(val.value);
     dispatch({
       type: SEARCH_FILTER,
       payload: val.value,
